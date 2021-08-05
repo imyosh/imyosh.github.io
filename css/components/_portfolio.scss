@@ -1,0 +1,131 @@
+/*==================== PORTFOLIO ====================*/
+
+.portfolio {
+  &__container {
+    overflow: initial;
+  }
+
+  &__content {
+    padding: 0 1.5rem;
+  }
+
+  &__img {
+    width: 265px;
+    border-radius: 0.5rem;
+    justify-self: center;
+  }
+
+  &__title {
+    font-size: var(--h3-font-size);
+    /* margin-bottom: var(--mb-0-5); */
+  }
+
+  &__modal-title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+    padding-right: 1.5rem;
+  }
+
+  &__subtitle {
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-0-5);
+  }
+
+  &__description {
+    margin-bottom: var(--mb-0-75);
+  }
+
+  &__button {
+    transform: unset;
+    cursor: pointer;
+    font-size: var(--small-font-size);
+    // transform: translateY(2rem);
+  }
+
+  &__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+
+  &__modal-content {
+    height: 80%;
+    width: 70%;
+    position: relative;
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  &__modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--first-color);
+    cursor: pointer;
+  }
+
+  &__modal-img {
+    width: 80%;
+    border-radius: 0.5rem;
+    justify-self: center;
+  }
+
+  &__button:hover .button__icon {
+    transform: translateX(0.25rem);
+  }
+
+  &__modal-swiper-next {
+    right: 0rem !important;
+  }
+
+  &__modal-swiper-prev {
+    left: 0rem !important;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}
+
+.swiper-portfolio-icon {
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.swiper-button-prev {
+  left: -0.5rem;
+}
+
+.swiper-button-next {
+  right: -0.5rem;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: -2.5rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--first-color);
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullet {
+  outline: none;
+}
