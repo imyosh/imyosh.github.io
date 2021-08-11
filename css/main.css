@@ -107,6 +107,7 @@ body.dark-theme {
 
 .nav__toggle:hover {
   color: var(--first-color);
+  fill: var(--first-color);
 }
 
 .nav__list {
@@ -139,6 +140,9 @@ body.dark-theme {
 
 .nav__icon {
   font-size: 1.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: white;
 }
 
 .nav__close {
@@ -146,6 +150,9 @@ body.dark-theme {
   right: 1.3rem;
   bottom: 0.5rem;
   font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--first-color);
   cursor: pointer;
   color: var(--first-color);
 }
@@ -180,6 +187,10 @@ body.dark-theme {
   color: var(--first-color);
 }
 
+.active-link svg {
+  fill: var(--first-color);
+}
+
 /* Change background header */
 .scroll-header {
   -webkit-box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
@@ -204,9 +215,24 @@ body.dark-theme {
 
 .button__icon {
   font-size: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   margin-left: var(--mb-0-5);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  fill: white;
+}
+
+.button__icon-services {
+  fill: var(--first-color);
+}
+
+.button__icon-project {
+  fill: var(--first-color);
+}
+
+.button__icon-download {
+  fill: white;
 }
 
 .button--white {
@@ -216,6 +242,12 @@ body.dark-theme {
 
 .button--white:hover {
   background-color: #fff;
+}
+
+.button--about-a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .button--flex {
@@ -240,6 +272,10 @@ body.dark-theme {
 .button--link:hover {
   background-color: transparent;
   color: var(--first-color-alt);
+}
+
+.button--link:hover svg {
+  fill: var(--first-color-alt);
 }
 
 /*==================== HOME ====================*/
@@ -269,13 +305,6 @@ body.dark-theme {
 }
 
 .home__social-icon {
-  font-size: 1.25rem;
-  color: var(--first-color);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.home__social-icon-leetcode {
   width: 1.25rem;
   height: 1.25rem;
   fill: var(--first-color);
@@ -334,6 +363,7 @@ body.dark-theme {
 
 .home__scroll-button {
   color: var(--first-color);
+  fill: var(--first-color);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -344,7 +374,9 @@ body.dark-theme {
 }
 
 .home__scroll-mouse {
-  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  fill: var(--first-color);
 }
 
 .home__scroll-name {
@@ -355,7 +387,8 @@ body.dark-theme {
 }
 
 .home__scroll-arrow {
-  font-size: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 /*==================== ABOUT ====================*/
@@ -425,8 +458,9 @@ body.dark-theme {
 }
 
 .skills__icon, .skills__arrow {
-  font-size: 2rem;
-  color: var(--first-color);
+  width: 2rem;
+  height: 2rem;
+  fill: var(--first-color);
 }
 
 .skills__icon {
@@ -556,9 +590,15 @@ body.dark-theme {
   color: var(--first-color);
 }
 
+.qualification__button:hover svg {
+  fill: var(--first-color);
+}
+
 .qualification__icon {
+  width: 1.8rem;
   font-size: 1.8rem;
   margin-right: var(--mb-0-25);
+  fill: #babfc4;
 }
 
 .qualification__data {
@@ -617,6 +657,10 @@ body.dark-theme {
   color: var(--first-color);
 }
 
+.qualification__button.qualification__active svg {
+  fill: var(--first-color);
+}
+
 /*==================== SERVICES ====================*/
 .services__container {
   gap: 1.5rem;
@@ -646,6 +690,9 @@ body.dark-theme {
   font-size: 1.5rem;
   color: var(--first-color);
   margin-bottom: var(--mb-1);
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: var(--first-color);
 }
 
 .services__title {
@@ -708,6 +755,9 @@ body.dark-theme {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .services__modal-title {
@@ -722,14 +772,18 @@ body.dark-theme {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 1.5rem;
-  color: var(--first-color);
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: var(--first-color);
   cursor: pointer;
 }
 
 .services__modal-icon {
   color: var(--first-color);
+  fill: var(--first-color);
   margin-right: var(--mb-0-25);
+  width: 1rem;
+  height: 1rem;
 }
 
 /* Active Modal */
@@ -851,8 +905,10 @@ body.dark-theme {
 }
 
 .swiper-portfolio-icon {
-  font-size: 2rem;
-  color: var(--first-color);
+  width: 2rem;
+  height: 2rem;
+  fill: var(--first-color);
+  overflow: visible;
 }
 
 .swiper-button-prev {
@@ -906,6 +962,7 @@ body.dark-theme {
       justify-self: center;
   -webkit-transform: translatey(-1.5rem);
           transform: translatey(-1.5rem);
+  margin-top: 1rem;
 }
 
 /*==================== TESTIMONIAL ====================*/
@@ -964,8 +1021,9 @@ body.dark-theme {
 }
 
 .contact__icon {
-  font-size: 2rem;
-  color: var(--first-color);
+  width: 2rem;
+  height: 2rem;
+  fill: var(--first-color);
   margin-right: var(--mb-0-75);
 }
 
@@ -1056,6 +1114,12 @@ input:-webkit-autofill:active {
   color: var(--first-color);
 }
 
+.footer__icon {
+  width: 1.3rem;
+  fill: white;
+  height: 1.3rem;
+}
+
 .footer__copy {
   font-size: var(--smaller-font-size);
   text-align: center;
@@ -1079,6 +1143,16 @@ input:-webkit-autofill:active {
   z-index: var(--z-tooltip);
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .scrollup:hover {
@@ -1086,8 +1160,9 @@ input:-webkit-autofill:active {
 }
 
 .scrollup__icon {
-  font-size: 1.5rem;
-  color: #fff;
+  fill: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 /* Show scroll */
@@ -1823,8 +1898,9 @@ input:-webkit-autofill:active {
 }
 
 .change-theme {
-  font-size: 1.25rem;
-  color: var(--title-color);
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: var(--title-color);
   margin-right: var(--mb-1);
   cursor: pointer;
 }
@@ -2202,6 +2278,9 @@ img {
     left: -5rem;
     width: 130%;
   }
+  .project__img {
+    margin-top: 0;
+  }
   .popup__card {
     width: 26rem;
   }
@@ -2356,7 +2435,8 @@ img {
             justify-content: center;
   }
   .services__icon {
-    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
   }
   .services__content {
     padding: 1rem 0 7rem 2.5rem;
@@ -2492,7 +2572,8 @@ img {
             column-gap: 5rem;
   }
   .swiper-portfolio-icon {
-    font-size: 3.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
   .swiper-button-prev {
     left: -3.5rem;

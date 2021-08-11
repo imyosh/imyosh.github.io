@@ -39,6 +39,12 @@
     color: var(--first-color);
   }
 
+  &__icon {
+    width: 1.3rem;
+    fill: white;
+    height: 1.3rem;
+  }
+
   &__copy {
     font-size: var(--smaller-font-size);
     text-align: center;

@@ -303,6 +303,10 @@
     width: 130%;
   }
 
+  .project__img {
+    margin-top: 0;
+  }
+
   .popup__card {
     width: 26rem;
   }
@@ -460,7 +464,8 @@
     justify-content: center;
   }
   .services__icon {
-    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
   }
   .services__content {
     padding: 1rem 0 7rem 2.5rem;
@@ -600,7 +605,8 @@
     column-gap: 5rem;
   }
   .swiper-portfolio-icon {
-    font-size: 3.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
   .swiper-button-prev {
     left: -3.5rem;

@@ -14,11 +14,16 @@
 
   &__button:hover {
     color: var(--first-color);
+    svg {
+      fill: var(--first-color);
+    }
   }
 
   &__icon {
+    width: 1.8rem;
     font-size: 1.8rem;
     margin-right: var(--mb-0-25);
+    fill: #babfc4;
   }
 
   &__data {
@@ -70,5 +75,8 @@
 
   &__button.qualification__active {
     color: var(--first-color);
+    svg {
+      fill: var(--first-color);
+    }
   }
 }

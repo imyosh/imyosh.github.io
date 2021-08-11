@@ -25,6 +25,7 @@
 
   &__toggle:hover {
     color: var(--first-color);
+    fill: var(--first-color);
   }
 
   &__list {
@@ -49,6 +50,9 @@
 
   &__icon {
     font-size: 1.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: white;
   }
 
   &__close {
@@ -56,6 +60,11 @@
     right: 1.3rem;
     bottom: 0.5rem;
     font-size: 1.5rem;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--first-color);
+
     cursor: pointer;
     color: var(--first-color);
   }
@@ -87,6 +96,9 @@
 /* Active link */
 .active-link {
   color: var(--first-color);
+  svg {
+    fill: var(--first-color);
+  }
 }
 
 /* Change background header */

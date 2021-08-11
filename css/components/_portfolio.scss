@@ -104,8 +104,11 @@
 }
 
 .swiper-portfolio-icon {
-  font-size: 2rem;
-  color: var(--first-color);
+  width: 2rem;
+  height: 2rem;
+  fill: var(--first-color);
+
+  overflow: visible;
 }
 
 .swiper-button-prev {
