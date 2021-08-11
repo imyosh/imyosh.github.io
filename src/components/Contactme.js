@@ -1,6 +1,58 @@
-import React from "react"
+import React, { useState } from "react"
+import MessageNotifyer from "./MessageNotifyer"
 
 function Contactme() {
+  const [message, setMessage] = useState("sending")
+
+  const showMessage = (type) => {
+    if (type === "sending") {
+      document.getElementById("MessageNotifyer").classList.add("open")
+    } else {
+      document.getElementById("MessageNotifyer").classList.add("open")
+      if (document.getElementById("check-icon"))
+        document.getElementById("check-icon").style.display = "block" // show
+
+      setTimeout(() => {
+        document.getElementById("MessageNotifyer").classList.remove("open")
+      }, 5000)
+
+      setTimeout(() => {
+        if (document.getElementById("check-icon"))
+          document.getElementById("check-icon").style.display = "none" // hide
+      }, 5300)
+    }
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const formData = new FormData(e.target)
+    const { name, email, message, project } = Object.fromEntries(formData)
+    setMessage("sending")
+    showMessage("sending")
+    if (navigator.onLine) {
+      window.Email.send({
+        Host: "smtp.gmail.com",
+        Username: "yoshportfolio@gmail.com",
+        Password: "port5511",
+        To: "hhoon5511@gmail.com",
+        From: "yoshportfolio@gmail.com",
+        Subject: name,
+        Body: `<div style="background: #c4d7ebe8; border-radius: 10px; padding: 20px">
+
+         Project type : ${project}<br/><br/>${message}<br/><br/>${email}
+        </div>
+        `,
+      }).then((message) => {
+        setMessage("success")
+        e.target.reset()
+        showMessage("success")
+      })
+    } else {
+      setMessage("noConnection")
+      showMessage("noConnection")
+    }
+  }
+
   return (
     // <!--==================== CONTACT ME ====================-->
     <section className="contact section" id="contact">
@@ -41,19 +93,19 @@ function Contactme() {
           </div>
         </div>
 
-        <form action="" className="contact__form grid">
+        <form onSubmit={handleSubmit} action="" className="contact__form grid">
           <div className="contact__inputs grid">
             <div className="contact__content">
               <label htmlFor="" className="contact__lable">
                 Name
               </label>
-              <input type="text" className="contact__input"></input>
+              <input required type="text" className="contact__input" name="name"></input>
             </div>
             <div className="contact__content">
               <label htmlFor="" className="contact__lable">
                 Email
               </label>
-              <input type="email" className="contact__input"></input>
+              <input required type="email" className="contact__input" name="email"></input>
             </div>
           </div>
 
@@ -61,23 +113,32 @@ function Contactme() {
             <label htmlFor="" className="contact__lable">
               Project
             </label>
-            <input type="text" className="contact__input"></input>
+            <input required type="text" className="contact__input" name="project"></input>
           </div>
           <div className="contact__content">
             <label htmlFor="" className="contact__lable">
               Message
             </label>
-            <textarea name="" id="" cols="0" rows="7" className="contact__input"></textarea>
+            <textarea
+              required
+              name="message"
+              id=""
+              cols="0"
+              rows="7"
+              className="contact__input"
+            ></textarea>
           </div>
 
           <div>
-            <a href="#" className="button button--flex">
+            <button type="submit" className="button button--flex">
               Send Message
               <i className="uil uil-message button__icon"></i>
-            </a>
+            </button>
           </div>
         </form>
       </div>
+
+      <MessageNotifyer type={message} />
     </section>
   )
 }

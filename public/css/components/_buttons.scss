@@ -6,6 +6,8 @@
   padding: 1rem;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
+  border: none;
+  cursor: pointer;
 
   &:hover {
     background-color: var(--first-color-alt);
