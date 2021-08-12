@@ -874,9 +874,10 @@ body.dark-theme {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 1.5rem;
-  color: var(--first-color);
   cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--first-color);
 }
 
 .portfolio__modal-img {
@@ -1921,6 +1922,7 @@ deliveringge-theme:hover {
 
 html {
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {

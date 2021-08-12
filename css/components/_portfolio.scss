@@ -74,9 +74,11 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    font-size: 1.5rem;
-    color: var(--first-color);
     cursor: pointer;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--first-color);
   }
 
   &__modal-img {
