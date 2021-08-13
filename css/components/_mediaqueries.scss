@@ -132,6 +132,13 @@
   .wifi-circle.second {
     display: none;
   }
+
+  .message__close {
+    top: 0.4rem;
+    right: 0.4rem;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
 }
 
 @media screen and (min-width: 351px) {

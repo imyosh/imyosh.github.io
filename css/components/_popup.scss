@@ -143,4 +143,15 @@
     top: 2rem;
     z-index: 5;
   }
+
+  &__close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--text-color);
+  }
 }
