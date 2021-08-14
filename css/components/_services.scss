@@ -18,7 +18,7 @@
 
   &__content:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    // transform: scale(1.01) translate3d(0, 0, 0) perspective(1px);
+    // transform: scale(1.05) translate3d(0, 0, 0) perspective(1px);
   }
 
   &__icon {
@@ -29,6 +29,17 @@
 
     height: 1.5rem;
     width: 1.5rem;
+    fill: var(--first-color);
+  }
+
+  &__modal-head-icon {
+    display: block;
+    font-size: 3rem;
+    color: var(--first-color);
+    margin-bottom: var(--mb-1);
+
+    height: 2rem;
+    width: 2rem;
     fill: var(--first-color);
   }
 
@@ -67,6 +78,11 @@
     transition: 0.3s;
   }
 
+  &__modal-head {
+    display: flex;
+    // align-items: center;
+  }
+
   &__modal-content,
   .portfolio__modal-content {
     position: relative;
@@ -89,6 +105,7 @@
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-1-5);
     padding-right: 1.5rem;
+    margin-left: 1rem;
   }
 
   &__modal-close,

@@ -141,6 +141,10 @@
     width: 1.2rem;
     height: 1.2rem;
   }
+
+  .services__modal-head {
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 351px) {
@@ -219,6 +223,10 @@
 
     top: -4rem;
     left: 0rem;
+  }
+
+  .services__modal-head-icon {
+    transform: translateY(-2px);
   }
 }
 
@@ -590,6 +598,12 @@
   .wifi-symbol {
     right: -2.2rem;
     top: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 970px) {
+  .services__modal-head-icon {
+    transform: translateY(0);
   }
 }
 

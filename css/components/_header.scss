@@ -11,6 +11,7 @@
     color: var(--title-color);
     font-weight: var(--font-medium);
 
+    fill: var(--title-color);
     transition: all 0.3s;
   }
 
@@ -19,8 +20,13 @@
   }
 
   &__toggle {
-    font-size: 1.1rem;
-    cursor: pointer;
+    width: 1.1rem;
+    height: 1.1rem;
+    svg {
+      width: 1.1rem;
+      height: 1.1rem;
+      cursor: pointer;
+    }
   }
 
   &__toggle:hover {

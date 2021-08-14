@@ -92,6 +92,7 @@ body.dark-theme {
 .nav__logo, .nav__toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
+  fill: var(--title-color);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -101,7 +102,13 @@ body.dark-theme {
 }
 
 .nav__toggle {
-  font-size: 1.1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.nav__toggle svg {
+  width: 1.1rem;
+  height: 1.1rem;
   cursor: pointer;
 }
 
@@ -695,6 +702,16 @@ body.dark-theme {
   fill: var(--first-color);
 }
 
+.services__modal-head-icon {
+  display: block;
+  font-size: 3rem;
+  color: var(--first-color);
+  margin-bottom: var(--mb-1);
+  height: 2rem;
+  width: 2rem;
+  fill: var(--first-color);
+}
+
 .services__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
@@ -739,6 +756,12 @@ body.dark-theme {
   transition: 0.3s;
 }
 
+.services__modal-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .services__modal-content,
 .services .portfolio__modal-content {
   position: relative;
@@ -765,6 +788,7 @@ body.dark-theme {
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-1-5);
   padding-right: 1.5rem;
+  margin-left: 1rem;
 }
 
 .services__modal-close,
@@ -1193,7 +1217,7 @@ input:-webkit-autofill:active {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.1);
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
@@ -1246,10 +1270,9 @@ input:-webkit-autofill:active {
           justify-content: center;
   overflow: hidden;
   opacity: 0;
-  -webkit-transform: translate(-50%, -50%) scale(0.25);
-          transform: translate(-50%, -50%) scale(0.25);
-  -webkit-transition: all 0.5s 0.2s;
-  transition: all 0.5s 0.2s;
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .popup:target {
@@ -2412,6 +2435,11 @@ img {
     width: 1.2rem;
     height: 1.2rem;
   }
+  .services__modal-head {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @media screen and (min-width: 351px) {
@@ -2479,6 +2507,10 @@ img {
     width: 100%;
     top: -4rem;
     left: 0rem;
+  }
+  .services__modal-head-icon {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
   }
 }
 
@@ -2826,6 +2858,13 @@ img {
   .wifi-symbol {
     right: -2.2rem;
     top: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 970px) {
+  .services__modal-head-icon {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
