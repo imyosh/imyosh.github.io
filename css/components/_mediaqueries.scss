@@ -91,11 +91,13 @@
     height: 6rem;
   }
 
-  .check-icon {
+  .check-icon,
+  .error-icon {
     transform: scale(0.5) translate3d(0, 0, 0) perspective(1px);
   }
 
-  .success-checkmark {
+  .success-checkmark,
+  .error-mark {
     // height: 44px;
     margin-bottom: 0.5rem;
     width: 44px;
@@ -146,11 +148,13 @@
     width: 20rem;
   }
 
-  .check-icon {
+  .check-icon,
+  .error-icon {
     transform: scale(0.6);
   }
 
-  .success-checkmark {
+  .success-checkmark,
+  .error-mark {
     // height: 44px;
     margin-bottom: 0.5rem;
     width: 44px;
@@ -159,7 +163,7 @@
   }
 
   .spinner-box {
-    margin-right: 0;
+    margin-right: 0.2rem;
   }
 
   .message__content-success {
@@ -171,7 +175,7 @@
   .message__mail {
     width: 1.9rem;
     height: 1.9rem;
-    right: 1.66rem;
+    right: 1.86rem;
     top: 3.1rem;
   }
 
@@ -318,11 +322,13 @@
     width: 26rem;
   }
 
-  .check-icon {
+  .check-icon,
+  .error-icon {
     transform: scale(0.8);
   }
 
-  .success-checkmark {
+  .success-checkmark,
+  .error-mark {
     margin-right: 1.3rem;
     margin-left: 2rem;
   }
@@ -340,8 +346,9 @@
   .message__mail {
     width: 2.9rem;
     height: 2.9rem;
+    right: 1.63rem;
     top: 2.6rem;
-    margin-right: 0.5rem;
+    margin-right: 0.59rem;
   }
 
   .message__title {
@@ -543,7 +550,8 @@
     width: 29rem;
   }
 
-  .check-icon {
+  .check-icon,
+  .error-icon {
     transform: scale(1) translate3d(0, 0, 0) perspective(1px);
   }
 
@@ -552,8 +560,13 @@
     margin-right: 2rem;
   }
 
+  .error-mark {
+    margin-left: 4rem;
+    margin-right: 2rem;
+  }
+
   .spinner-box {
-    margin-right: 0.5rem;
+    margin-right: 0.6rem;
     // margin-right: 0rem;
   }
 
@@ -564,7 +577,7 @@
   .message__mail {
     width: 3.5rem;
     height: 3.5rem;
-    right: 2.4rem;
+    right: 2.57rem;
     top: 2.3rem;
     margin-right: 0;
   }

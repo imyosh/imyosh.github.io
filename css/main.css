@@ -1899,8 +1899,8 @@ input:-webkit-autofill:active {
 }
 
 .sa {
-  width: 140px;
-  height: 140px;
+  width: var(--check-size);
+  height: var(--check-size);
   padding: 26px;
   background-color: #111111;
 }
@@ -1917,6 +1917,8 @@ input:-webkit-autofill:active {
   width: 80px;
   -webkit-animation: animateErrorIcon 0.5s;
           animation: animateErrorIcon 0.5s;
+  -webkit-animation: disapear 0.1s 0.5s forwards;
+          animation: disapear 0.1s 0.5s forwards;
 }
 
 .sa-error:after, .sa-error:before {
@@ -2041,27 +2043,35 @@ input:-webkit-autofill:active {
 
 @-webkit-keyframes animateErrorIcon {
   0% {
-    -webkit-transform: rotateX(100deg);
-            transform: rotateX(100deg);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
     opacity: 1;
   }
 }
 
 @keyframes animateErrorIcon {
   0% {
-    -webkit-transform: rotateX(100deg);
-            transform: rotateX(100deg);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes disapear {
+  0% {
+  }
+  100% {
+    border: 4px solid transparent;
+  }
+}
+
+@keyframes disapear {
+  0% {
+  }
+  100% {
+    border: 4px solid transparent;
   }
 }
 
@@ -2139,6 +2149,12 @@ input:-webkit-autofill:active {
     top: 37px;
     width: 47px;
   }
+}
+
+.error-mark {
+  width: var(--check-size);
+  height: var(--check-size);
+  margin: 0 auto;
 }
 
 /*========== Button Dark/Light ==========*/
@@ -2352,11 +2368,13 @@ img {
     width: 16rem;
     height: 6rem;
   }
-  .check-icon {
+  .check-icon,
+  .error-icon {
     -webkit-transform: scale(0.5) translate3d(0, 0, 0) perspective(1px);
             transform: scale(0.5) translate3d(0, 0, 0) perspective(1px);
   }
-  .success-checkmark {
+  .success-checkmark,
+  .error-mark {
     margin-bottom: 0.5rem;
     width: 44px;
     -webkit-transform: translateX(-22px);
@@ -2400,11 +2418,13 @@ img {
   .popup__card {
     width: 20rem;
   }
-  .check-icon {
+  .check-icon,
+  .error-icon {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
   }
-  .success-checkmark {
+  .success-checkmark,
+  .error-mark {
     margin-bottom: 0.5rem;
     width: 44px;
     -webkit-transform: translateX(-22px);
@@ -2412,7 +2432,7 @@ img {
     margin-right: 0.5rem;
   }
   .spinner-box {
-    margin-right: 0;
+    margin-right: 0.2rem;
   }
   .message__content-success {
     font-size: 13px;
@@ -2423,7 +2443,7 @@ img {
   .message__mail {
     width: 1.9rem;
     height: 1.9rem;
-    right: 1.66rem;
+    right: 1.86rem;
     top: 3.1rem;
   }
   .message__title {
@@ -2545,11 +2565,13 @@ img {
   .popup__card {
     width: 26rem;
   }
-  .check-icon {
+  .check-icon,
+  .error-icon {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
-  .success-checkmark {
+  .success-checkmark,
+  .error-mark {
     margin-right: 1.3rem;
     margin-left: 2rem;
   }
@@ -2565,8 +2587,9 @@ img {
   .message__mail {
     width: 2.9rem;
     height: 2.9rem;
+    right: 1.63rem;
     top: 2.6rem;
-    margin-right: 0.5rem;
+    margin-right: 0.59rem;
   }
   .message__title {
     font-size: 1.3rem;
@@ -2770,7 +2793,8 @@ img {
   .popup__card {
     width: 29rem;
   }
-  .check-icon {
+  .check-icon,
+  .error-icon {
     -webkit-transform: scale(1) translate3d(0, 0, 0) perspective(1px);
             transform: scale(1) translate3d(0, 0, 0) perspective(1px);
   }
@@ -2778,8 +2802,12 @@ img {
     margin-left: 4rem;
     margin-right: 2rem;
   }
+  .error-mark {
+    margin-left: 4rem;
+    margin-right: 2rem;
+  }
   .spinner-box {
-    margin-right: 0.5rem;
+    margin-right: 0.6rem;
   }
   :root {
     --spiner-size: 88px;
@@ -2787,7 +2815,7 @@ img {
   .message__mail {
     width: 3.5rem;
     height: 3.5rem;
-    right: 2.4rem;
+    right: 2.57rem;
     top: 2.3rem;
     margin-right: 0;
   }

@@ -1,8 +1,9 @@
 .sa {
-  width: 140px;
-  height: 140px;
+  width: var(--check-size);
+  height: var(--check-size);
   padding: 26px;
   background-color: #111111;
+
   &-error {
     border-radius: 50%;
     border: 4px solid #f27474;
@@ -13,6 +14,8 @@
     background-color: #111111;
     width: 80px;
     animation: animateErrorIcon 0.5s;
+    animation: disapear 0.1s 0.5s forwards;
+
     &:after,
     &:before {
       background: #111111;
@@ -104,14 +107,24 @@
 }
 @keyframes animateErrorIcon {
   0% {
-    transform: rotateX(100deg);
+    // transform: rotateX(100deg);
     opacity: 0;
   }
   100% {
-    transform: rotateX(0deg);
+    // transform: rotateX(0deg);
     opacity: 1;
+    // border: 4px solid transparent;
   }
 }
+
+@keyframes disapear {
+  0% {
+  }
+  100% {
+    border: 4px solid transparent;
+  }
+}
+
 @keyframes animateXLeft {
   0%,
   65% {
@@ -147,4 +160,10 @@
     top: 37px;
     width: 47px;
   }
+}
+
+.error-mark {
+  width: var(--check-size);
+  height: var(--check-size);
+  margin: 0 auto;
 }
