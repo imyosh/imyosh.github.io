@@ -690,6 +690,8 @@ body.dark-theme {
 .services__content:hover {
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1.05) translate3d(0, 0, 0) perspective(1px);
+          transform: scale(1.05) translate3d(0, 0, 0) perspective(1px);
 }
 
 .services__icon {
