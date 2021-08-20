@@ -26,6 +26,10 @@
     width: 180px;
   }
 
+  .home__data {
+    margin-left: 0.5rem;
+  }
+
   .skills__title {
     font-size: var(--normal-font-size);
   }
@@ -148,6 +152,10 @@
 }
 
 @media screen and (min-width: 351px) {
+  .home__data {
+    margin-left: 1rem;
+  }
+
   .popup__card {
     width: 20rem;
   }
@@ -281,6 +289,7 @@
   }
   .home__data {
     grid-column: initial;
+    margin-left: 0;
   }
   .home__img {
     order: 1;
