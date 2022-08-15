@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 function About() {
   return (
@@ -11,27 +11,28 @@ function About() {
 
         <div className="about__data">
           <p className="about__description">
-            Full stack developer, with decent knowledge and over one year of experience, working in
-            desktop and web technologies, delivering quality work.
+            Full stack developer, with decent knowledge and over 3 years of
+            experience, working in desktop and web technologies, delivering
+            quality work.
           </p>
 
           <div className="about__info">
             <div>
-              <span className="about__info-title">1+</span>
+              <span className="about__info-title">3+</span>
               <span className="about__info-name">
                 Year <br></br> experience
               </span>
             </div>
             <div>
-              <span className="about__info-title">6+</span>
+              <span className="about__info-title">20+</span>
               <span className="about__info-name">
-                Completed <br></br>big project
+                Completed <br></br>projects
               </span>
             </div>
             <div>
-              <span className="about__info-title">15+</span>
+              <span className="about__info-title">4+</span>
               <span className="about__info-name">
-                Completed <br></br>small project
+                Experienced <br></br>frameworks
               </span>
             </div>
             {/* <!-- <div>
@@ -41,8 +42,15 @@ function About() {
           </div>
 
           <div className="about__buttons">
-            <a download="" href="pdf/Alexa-Cv.pdf" className="button button--fle">
-              Download CV<i className="uil uil-download-alt button__icon"></i>
+            <a
+              download=""
+              href="pdf/YoshCv.pdf"
+              className="button button--about-a"
+            >
+              Download CV
+              <svg className="button__icon button__icon-download">
+                <use xlinkHref="svg/download-alt.svg#download-alt"></use>
+              </svg>
             </a>
           </div>
         </div>

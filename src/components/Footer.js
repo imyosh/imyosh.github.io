@@ -34,24 +34,33 @@ function Footer() {
               href="https://www.instagram.com/hassan_yosh/"
               target="_blank"
               className="footer__social"
+              rel="noreferrer"
             >
-              <i className="uil uil-instagram"></i>
+              <svg className="footer__icon">
+                <use xlinkHref="svg/instagram.svg#instagram"></use>
+              </svg>
             </a>
 
             <a
               href="https://web.facebook.com/profile.php?id=100005312891117"
               target="_blank"
               className="footer__social"
+              rel="noreferrer"
             >
-              <i className="uil uil-facebook-f"></i>
+              <svg className="footer__icon">
+                <use xlinkHref="svg/facebook-f.svg#facebook-f"></use>
+              </svg>
             </a>
 
             <a
               href="https://mobile.twitter.com/Hassan_Yosh"
               target="_blank"
               className="footer__social"
+              rel="noreferrer"
             >
-              <i className="uil uil-twitter-alt"></i>
+              <svg className="footer__icon">
+                <use xlinkHref="svg/twitter-alt.svg#twitter-alt"></use>
+              </svg>
             </a>
           </div>
         </div>

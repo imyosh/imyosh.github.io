@@ -1,59 +1,89 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from 'react'
 
 const PortfolioData = [
   {
-    title: "Ophelos",
-    type: "Desktop App",
+    title: 'Ophelos',
+    type: 'Desktop App',
     description:
-      "A financial and business manager applications that manages the sales of your store or a service you provide.",
-    imgs: ["/img/myojooo1.bmp", "/img/myojooo2.bmp", "/img/myojooo2.bmp"],
+      'A financial and business manager applications that manages the sales of your store or a service you provide.',
+    thumbnail: '/img/ophelos1.png',
+    imgs: ['/img/ophelos1.png', '/img/ophelos2.png', '/img/ophelos3.png'],
   },
   {
-    title: "Myojooo",
-    type: "Desktop App",
+    title: 'Onxe',
+    type: 'Desktop App / Frontend',
     description:
-      "A referrals management application for the referral system of ojooo.com PTC website.",
-    imgs: ["/img/ophelos1.bmp", "/img/ophelos2.bmp", "/img/ophelos3.bmp", "/img/ophelos4.bmp"],
+      'A desktop application for stock market monitoring, data visualization and indicators scanning/analyzing tools .',
+
+    thumbnail: '/img/onxe.png',
+    imgs: ['/img/onxe.png'],
+  },
+
+  {
+    title: 'Myojooo',
+    type: 'Desktop App',
+    description:
+      'A referrals management application for the referral system of ojooo.com PTC website.',
+
+    thumbnail: '/img/myojooo1.bmp',
+    imgs: ['/img/myojooo1.bmp', '/img/myojooo2.bmp', '/img/myojooo3.bmp'],
+  },
+
+  {
+    title: 'EndZone - songs',
+    type: 'Discord bot',
+    description:
+      "A discord bot for playing music in the voice channel, ability to add any songs that's available on youtube.",
+    thumbnail: '/img/songs1.png',
+    imgs: [
+      '/img/songs1.png',
+      '/img/songs2.png',
+      '/img/songs3.png',
+      '/img/songs4.png',
+    ],
   },
   {
-    title: "Test",
-    type: "Desktop App",
+    title: 'EndZone - kick',
+    type: 'Discord bot',
     description:
-      "A buch of test images to test the quality needed for the portfolio :) and thats it.",
-    imgs: ["/img/test1.jpg", "/img/test2.jpg", "/img/test3.jpg"],
+      'A discord bot for kicking unwanted person from a voice channel by the majority vote.',
+    thumbnail: '/img/kick1.png',
+    imgs: ['/img/kick1.png', '/img/kick2.png'],
   },
 ]
 
-function Portfolio() {
-  let modalPortfolioViews = []
+const Portfolio = () => {
+  const portfolio = useRef(null)
 
-  let openModal = function (modalClick) {
-    modalPortfolioViews[modalClick].classList.add("active-modal")
+  let openModal = (modalClick) => {
+    portfolio.current
+      .querySelectorAll('.portfolio__modal')
+      [modalClick].classList.add('active-modal')
   }
 
-  let closeModal = function (modalClick) {
-    modalPortfolioViews.forEach((modalView) => {
-      modalView.classList.remove("active-modal")
-    })
+  let closeModal = () => {
+    portfolio.current
+      .querySelectorAll('.portfolio__modal')
+      .forEach((modalView) => {
+        modalView.classList.remove('active-modal')
+      })
   }
 
   useEffect(() => {
-    /*==================== PORTFOLIO SWIPER  ====================*/
     window.setupPortfolioSwiper()
-
-    modalPortfolioViews = document.querySelectorAll(".portfolio__modal")
   }, [])
+
   return (
     // <!--==================== PORTFOLIO ====================-->
-    <section className="portfolio section" id="portfolio">
+    <section ref={portfolio} className="portfolio section" id="portfolio">
       <h2 className="section__title">Portfolio</h2>
       <span className="section__subtitle">Most recent work</span>
 
       <div className="portfolio__container container swiper-container">
         <div className="swiper-wrapper">
-          {PortfolioData.map(({ title, type, description, imgs }, id) => (
+          {PortfolioData.map(({ title, type, description, thumbnail }, id) => (
             <div key={id} className="portfolio__content grid swiper-slide">
-              <img src={imgs[0]} alt="" className="portfolio__img"></img>
+              <img src={thumbnail} alt="" className="portfolio__img"></img>
 
               <div className="portfolio__data">
                 <h3 className="portfolio__title">{title}</h3>
@@ -66,7 +96,9 @@ function Portfolio() {
                   className="button button--flex button--small portfolio__button "
                 >
                   Demo
-                  <i className="uil uil-arrow-right button__icon"></i>
+                  <svg className="button__icon">
+                    <use xlinkHref="svg/arrow-right.svg#arrow-right"></use>
+                  </svg>
                 </span>
               </div>
             </div>
@@ -75,10 +107,14 @@ function Portfolio() {
 
         {/* <!-- Add Arrows --> */}
         <div className="swiper-button-next">
-          <i className="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          <svg className="swiper-portfolio-icon">
+            <use xlinkHref="svg/angle-right-b.svg#angle-right-b"></use>
+          </svg>
         </div>
         <div className="swiper-button-prev">
-          <i className="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          <svg className="swiper-portfolio-icon">
+            <use xlinkHref="svg/angle-left-b.svg#angle-left-b"></use>
+          </svg>
         </div>
 
         {/* <!-- Add Pagination --> */}
@@ -90,23 +126,41 @@ function Portfolio() {
         <div key={id} className="portfolio__modal">
           <div className="portfolio__modal-content">
             <h4 className="portfolio__modal-title">{title}</h4>
-            <i onClick={closeModal} className="uil uil-times portfolio__modal-close"></i>
+
+            <svg onClick={closeModal} className="portfolio__modal-close">
+              <use xlinkHref="svg/times.svg#times"></use>
+            </svg>
 
             <div className="portfolio__container container swiper-container">
               <div className="swiper-wrapper">
                 {imgs.map((img, id) => (
                   <div key={id} className=" grid swiper-slide">
-                    <img src={img} alt="" className="portfolio__modal-img"></img>
+                    <img
+                      src={img}
+                      alt=""
+                      className="portfolio__modal-img"
+                    ></img>
                   </div>
                 ))}
               </div>
 
               {/* <!-- Add Arrows --> */}
-              <div className="swiper-button-next portfolio__modal-swiper-next">
+              {/* <div className="swiper-button-next portfolio__modal-swiper-next">
                 <i className="uil uil-angle-right-b swiper-portfolio-icon"></i>
               </div>
               <div className="swiper-button-prev portfolio__modal-swiper-prev">
                 <i className="uil uil-angle-left-b swiper-portfolio-icon"></i>
+              </div> */}
+
+              <div className="swiper-button-next portfolio__modal-swiper-next">
+                <svg className="swiper-portfolio-icon">
+                  <use xlinkHref="svg/angle-right-b.svg#angle-right-b"></use>
+                </svg>
+              </div>
+              <div className="swiper-button-prev portfolio__modal-swiper-prev">
+                <svg className="swiper-portfolio-icon">
+                  <use xlinkHref="svg/angle-left-b.svg#angle-left-b"></use>
+                </svg>
               </div>
 
               {/* <!-- Add Pagination --> */}

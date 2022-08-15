@@ -18,7 +18,7 @@
 
   &__content:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    // transform: scale(1.01) translate3d(0, 0, 0) perspective(1px);
+    transform: scale(1.05) translate3d(0, 0, 0) perspective(1px);
   }
 
   &__icon {
@@ -26,6 +26,21 @@
     font-size: 1.5rem;
     color: var(--first-color);
     margin-bottom: var(--mb-1);
+
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--first-color);
+  }
+
+  &__modal-head-icon {
+    display: block;
+    font-size: 3rem;
+    color: var(--first-color);
+    margin-bottom: var(--mb-1);
+
+    height: 2rem;
+    width: 2rem;
+    fill: var(--first-color);
   }
 
   &__title {
@@ -63,6 +78,11 @@
     transition: 0.3s;
   }
 
+  &__modal-head {
+    display: flex;
+    // align-items: center;
+  }
+
   &__modal-content,
   .portfolio__modal-content {
     position: relative;
@@ -77,6 +97,7 @@
 
   &__modal-service {
     display: flex;
+    align-items: center;
   }
 
   &__modal-title {
@@ -84,6 +105,7 @@
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-1-5);
     padding-right: 1.5rem;
+    margin-left: 1rem;
   }
 
   &__modal-close,
@@ -91,14 +113,18 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    font-size: 1.5rem;
-    color: var(--first-color);
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--first-color);
     cursor: pointer;
   }
 
   &__modal-icon {
     color: var(--first-color);
+    fill: var(--first-color);
     margin-right: var(--mb-0-25);
+    width: 1rem;
+    height: 1rem;
   }
 }
 

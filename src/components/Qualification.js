@@ -34,13 +34,16 @@ function Qualification() {
             className="qualification__button button--flex qualification__active"
             data-target="#education"
           >
-            <i className="uil uil-graduation-cap qualification__icon"></i>
+            <svg className="qualification__icon">
+              <use xlinkHref="svg/graduation-cap.svg#graduation-cap"></use>
+            </svg>
             Education
           </div>
 
           <div className="qualification__button button--flex" data-target="#work">
-            {/* <!-- <i className="uil uil-briefcase-alt qualification__icon"></i> --> */}
-            <i className="uil uil-laptop qualification__icon"></i>
+            <svg className="qualification__icon">
+              <use xlinkHref="svg/laptop.svg#laptop"></use>
+            </svg>
             Coding
           </div>
         </div>
@@ -76,7 +79,7 @@ function Qualification() {
 
               <div>
                 <h3 className="qualification__title">Arduino</h3>
-                <span className="qualification__subtitle">Sumerics labs</span>
+                <span className="qualification__subtitle">Sumakers lab</span>
                 <div className="qualification__calendar">
                   <i className="uil uil-calendar-alt"></i>
                   2018 - 2019

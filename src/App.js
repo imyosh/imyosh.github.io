@@ -63,8 +63,10 @@ const App = () => {
       </main>
 
       {/* <!--==================== SCROLL TOP ====================--> */}
-      <a href="#" className="scrollup" id="scroll-up">
-        <i className="uil uil-arrow-up scrollup__icon"></i>
+      <a href="#home" className="scrollup" id="scroll-up">
+        <svg className="scrollup__icon">
+          <use xlinkHref="svg/arrow-up.svg#arrow-up"></use>
+        </svg>
       </a>
     </>
   )

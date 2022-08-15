@@ -31,37 +31,21 @@ function Skills() {
           {/* <!--==================== SKILLS 1 ====================--> */}
           <div className="skills__content skills__open">
             <div className="skills__header">
-              <i className="uil uil-brackets-curly skills__icon"></i>
+              <svg className="skills__icon">
+                <use xlinkHref="svg/brackets-curly.svg#brackets-curly"></use>
+              </svg>
 
               <div>
                 <h1 className="skills__title">Frontend developer</h1>
                 <span className="skills__subtitle">More than one year</span>
               </div>
 
-              <i className="uil uil-angle-down skills__arrow"></i>
+              <svg className="skills__arrow">
+                <use xlinkHref="svg/angle-down.svg#angle-down"></use>
+              </svg>
             </div>
 
             <div className="skills__list grid">
-              <div className="skills__data">
-                <div className="skills__titles">
-                  <h3 className="skills__name">HTML</h3>
-                  <span className="skills__number">85%</span>
-                </div>
-                <div className="skills__bar">
-                  <span className="skills__percentage skills__html"></span>
-                </div>
-              </div>
-
-              <div className="skills__data">
-                <div className="skills__titles">
-                  <h3 className="skills__name">CSS</h3>
-                  <span className="skills__number">80%</span>
-                </div>
-                <div className="skills__bar">
-                  <span className="skills__percentage skills__css"></span>
-                </div>
-              </div>
-
               <div className="skills__data">
                 <div className="skills__titles">
                   <h3 className="skills__name">JavaScript</h3>
@@ -81,20 +65,44 @@ function Skills() {
                   <span className="skills__percentage skills__react"></span>
                 </div>
               </div>
+
+              <div className="skills__data">
+                <div className="skills__titles">
+                  <h3 className="skills__name">HTML</h3>
+                  <span className="skills__number">85%</span>
+                </div>
+                <div className="skills__bar">
+                  <span className="skills__percentage skills__html"></span>
+                </div>
+              </div>
+
+              <div className="skills__data">
+                <div className="skills__titles">
+                  <h3 className="skills__name">CSS</h3>
+                  <span className="skills__number">80%</span>
+                </div>
+                <div className="skills__bar">
+                  <span className="skills__percentage skills__css"></span>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* <!--==================== SKILLS 2 ====================--> */}
           <div className="skills__content skills__close">
             <div className="skills__header">
-              <i className="uil uil-server-network skills__icon"></i>
+              <svg className="skills__icon">
+                <use xlinkHref="svg/server-network.svg#server-network"></use>
+              </svg>
 
               <div>
                 <h1 className="skills__title">Backend developer</h1>
                 <span className="skills__subtitle">More than six months</span>
               </div>
 
-              <i className="uil uil-angle-down skills__arrow"></i>
+              <svg className="skills__arrow">
+                <use xlinkHref="svg/angle-down.svg#angle-down"></use>
+              </svg>
             </div>
 
             <div className="skills__list grid">
@@ -120,11 +128,11 @@ function Skills() {
 
               <div className="skills__data">
                 <div className="skills__titles">
-                  <h3 className="skills__name">MongoDb</h3>
-                  <span className="skills__number">40%</span>
+                  <h3 className="skills__name">sqlite3</h3>
+                  <span className="skills__number">75%</span>
                 </div>
                 <div className="skills__bar">
-                  <span className="skills__percentage skills__mongodb"></span>
+                  <span className="skills__percentage skills__sqlite3"></span>
                 </div>
               </div>
             </div>
@@ -135,14 +143,18 @@ function Skills() {
           {/* <!--==================== SKILLS 4 ====================--> */}
           <div className="skills__content skills__close">
             <div className="skills__header">
-              <i className="uil uil-desktop skills__icon"></i>
+              <svg className="skills__icon">
+                <use xlinkHref="svg/desktop.svg#desktop"></use>
+              </svg>
 
               <div>
                 <h1 className="skills__title">Desktop developer</h1>
                 <span className="skills__subtitle">More than one year</span>
               </div>
 
-              <i className="uil uil-angle-down skills__arrow"></i>
+              <svg className="skills__arrow">
+                <use xlinkHref="svg/angle-down.svg#angle-down"></use>
+              </svg>
             </div>
 
             <div className="skills__list grid">
@@ -173,13 +185,18 @@ function Skills() {
           {/* <!--==================== SKILLS 3 ====================--> */}
           <div className="skills__content skills__close">
             <div className="skills__header">
-              <i className="uil uil-discord skills__icon"></i>
+              <svg className="skills__icon">
+                <use xlinkHref="svg/discord.svg#discord"></use>
+              </svg>
+
               <div>
                 <h1 className="skills__title">Discord bot developer</h1>
                 <span className="skills__subtitle">More than three months</span>
               </div>
 
-              <i className="uil uil-angle-down skills__arrow"></i>
+              <svg className="skills__arrow">
+                <use xlinkHref="svg/angle-down.svg#angle-down"></use>
+              </svg>
             </div>
 
             <div className="skills__list grid">

@@ -1,9 +1,13 @@
 import React, { useState } from "react"
 import MessageNotifyer from "./MessageNotifyer"
 
+var id1, id2
 function Contactme() {
   const [message, setMessage] = useState("sending")
 
+  // window.toe = () => setMessage("error")
+  // window.tos = () => setMessage("success")
+  // window.tol = () => setMessage("sending")
   const showMessage = (type) => {
     if (type === "sending") {
       document.getElementById("MessageNotifyer").classList.add("open")
@@ -12,15 +16,27 @@ function Contactme() {
       if (document.getElementById("check-icon"))
         document.getElementById("check-icon").style.display = "block" // show
 
-      setTimeout(() => {
+      id1 = setTimeout(() => {
         document.getElementById("MessageNotifyer").classList.remove("open")
-      }, 5000)
+      }, 7000)
 
-      setTimeout(() => {
+      id2 = setTimeout(() => {
         if (document.getElementById("check-icon"))
           document.getElementById("check-icon").style.display = "none" // hide
-      }, 5300)
+      }, 7300)
     }
+  }
+
+  const closePopup = () => {
+    document.getElementById("MessageNotifyer").classList.remove("open")
+
+    setTimeout(() => {
+      if (document.getElementById("check-icon"))
+        document.getElementById("check-icon").style.display = "none" // hide
+    }, 300)
+
+    clearTimeout(id1)
+    clearTimeout(id2)
   }
 
   const handleSubmit = (e) => {
@@ -43,9 +59,15 @@ function Contactme() {
         </div>
         `,
       }).then((message) => {
-        setMessage("success")
-        e.target.reset()
-        showMessage("success")
+        if (message === "OK") {
+          setMessage("success")
+          e.target.reset()
+          showMessage("success")
+        } else {
+          showMessage("error")
+        }
+
+        console.log(message)
       })
     } else {
       setMessage("noConnection")
@@ -62,7 +84,9 @@ function Contactme() {
       <div className="contact__container container grid">
         <div>
           <div className="contact__information">
-            <i className="uil uil-phone contact__icon"></i>
+            <svg className="contact__icon">
+              <use xlinkHref="svg/phone.svg#phone"></use>
+            </svg>
 
             <div>
               <h3 className="contact__title">Call Me</h3>
@@ -73,7 +97,9 @@ function Contactme() {
           </div>
 
           <div className="contact__information">
-            <i className="uil uil-envelope contact__icon"></i>
+            <svg className="contact__icon">
+              <use xlinkHref="svg/envelope.svg#envelope"></use>
+            </svg>
 
             <div>
               <h3 className="contact__title">Email</h3>
@@ -84,7 +110,9 @@ function Contactme() {
           </div>
 
           <div className="contact__information">
-            <i className="uil uil-map-marker contact__icon"></i>
+            <svg className="contact__icon">
+              <use xlinkHref="svg/map-marker.svg#map-marker"></use>
+            </svg>
 
             <div>
               <h3 className="contact__title">Location</h3>
@@ -138,7 +166,7 @@ function Contactme() {
         </form>
       </div>
 
-      <MessageNotifyer type={message} />
+      <MessageNotifyer type={message} closePopup={closePopup} />
     </section>
   )
 }

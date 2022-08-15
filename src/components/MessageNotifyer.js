@@ -1,18 +1,8 @@
 import React from "react"
 
-const MessageNotifyer = ({ type }) => {
-  console.log(type)
-  const closePopup = () => {
-    document.getElementById("MessageNotifyer").classList.remove("open")
-
-    setTimeout(() => {
-      if (document.getElementById("check-icon"))
-        document.getElementById("check-icon").style.display = "none" // hide
-    }, 300)
-  }
-
+const MessageNotifyer = ({ type, closePopup }) => {
   return (
-    <div onClick={closePopup} className="popup" id="MessageNotifyer">
+    <div className="popup" id="MessageNotifyer">
       <div
         onClick={(e) => {
           e.stopPropagation()
@@ -26,11 +16,11 @@ const MessageNotifyer = ({ type }) => {
                 <span className="message__title">Sending your request ...</span>
               </div>
               <svg className="message__mail">
-                <use xlinkHref="img/mail.svg#mail"></use>
+                <use xlinkHref="svg/mail.svg#mail"></use>
               </svg>
-              <div class="spinner-box">
-                <div class="circle-border">
-                  <div class="circle-core"></div>
+              <div className="spinner-box">
+                <div className="circle-border">
+                  <div className="circle-core"></div>
                 </div>
               </div>
             </>
@@ -53,6 +43,36 @@ const MessageNotifyer = ({ type }) => {
                   <div className="icon-fix"></div>
                 </div>
               </div>
+
+              <svg onClick={closePopup} className="message__close">
+                <use xlinkHref="svg/times.svg#times"></use>
+              </svg>
+            </>
+          ) : type === "error" ? (
+            <>
+              <div>
+                <span className="message__title">
+                  Error !<br></br>
+                </span>
+                <span className="message__content-success">
+                  Can't send your request at the moment, please try again.
+                </span>
+              </div>
+
+              <div className="error-mark">
+                <div className="sa-error error-icon">
+                  <div className="sa-error-x">
+                    <div className="sa-error-left"></div>
+                    <div className="sa-error-right"></div>
+                  </div>
+                  <div className="sa-error-placeholder "></div>
+                  <div className="sa-error-fix "></div>
+                </div>
+              </div>
+
+              <svg onClick={closePopup} className="message__close">
+                <use xlinkHref="svg/times.svg#times"></use>
+              </svg>
             </>
           ) : (
             <>
@@ -62,12 +82,16 @@ const MessageNotifyer = ({ type }) => {
                 <span className="message__content-success">Check your internet connection.</span>
               </div>
 
-              <div class="wifi-symbol">
-                {/* <div class="wifi-circle first"></div> */}
-                <div class="wifi-circle second"></div>
-                <div class="wifi-circle third"></div>
-                <div class="wifi-circle fourth"></div>
+              <div className="wifi-symbol">
+                {/* <div className="wifi-circle first"></div> */}
+                <div className="wifi-circle second"></div>
+                <div className="wifi-circle third"></div>
+                <div className="wifi-circle fourth"></div>
               </div>
+
+              <svg onClick={closePopup} className="message__close">
+                <use xlinkHref="svg/times.svg#times"></use>
+              </svg>
             </>
           )}
         </div>

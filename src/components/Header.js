@@ -49,11 +49,15 @@ const Header = () => {
       document.body.classList[selectedTheme === "dark" ? "add" : "remove"](darkTheme)
 
       if (selectedTheme === "dark") {
-        themeButton.classList.add("uil-sun")
-        themeButton.classList.remove("uil-moon")
+        // themeButton.classList.add("uil-sun")
+        // themeButton.classList.remove("uil-moon")
+
+        themeButton.firstChild.href.baseVal = "svg/sun.svg#sun"
       } else {
-        themeButton.classList.add("uil-moon")
-        themeButton.classList.remove("uil-sun")
+        // themeButton.classList.add("uil-moon")
+        // themeButton.classList.remove("uil-sun")
+
+        themeButton.firstChild.href.baseVal = "svg/moon.svg#moon"
       }
     }
 
@@ -61,8 +65,15 @@ const Header = () => {
     themeButton.addEventListener("click", () => {
       // Add or remove the dark / icon theme
       document.body.classList.toggle(darkTheme)
-      themeButton.classList.toggle("uil-moon")
-      themeButton.classList.toggle("uil-sun")
+
+      if (themeButton.firstChild.href.baseVal === "svg/sun.svg#sun") {
+        themeButton.firstChild.href.baseVal = "svg/moon.svg#moon"
+      } else {
+        themeButton.firstChild.href.baseVal = "svg/sun.svg#sun"
+      }
+
+      // themeButton.classList.toggle("uil-moon")
+      // themeButton.classList.toggle("uil-sun")
       // We save the theme and the current icon that the user chose
       localStorage.setItem("selected-theme", getCurrentTheme())
     })
@@ -80,51 +91,80 @@ const Header = () => {
   return (
     <header className="header" id="header">
       <nav className="nav container">
-        <a href="#" className="nav__logo">
+        <a href="#home" className="nav__logo">
           Yosh
         </a>
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list grid">
             <li className="nav__item">
               <a href="#home" className="nav__link active-link">
-                <i className="uil uil-estate nav__icon"></i>Home
+                <svg className="nav__icon">
+                  <use xlinkHref="svg/estate.svg#estate"></use>
+                </svg>
+                Home
               </a>
             </li>
             <li className="nav__item">
               <a href="#about" className="nav__link">
-                <i className="uil uil-user nav__icon"></i>About
+                <svg className="nav__icon">
+                  <use xlinkHref="svg/user.svg#user"></use>
+                </svg>
+                About
               </a>
             </li>
             <li className="nav__item">
               <a href="#skills" className="nav__link">
-                <i className="uil uil-file-alt nav__icon"></i> Skills
+                <svg className="nav__icon">
+                  <use xlinkHref="svg/file-alt.svg#file-alt"></use>
+                </svg>
+                Skills
               </a>
             </li>
             <li className="nav__item">
               <a href="#services" className="nav__link">
-                <i className="uil uil-briefcase-alt nav__icon"></i> Services
+                <svg className="nav__icon">
+                  <use xlinkHref="svg/briefcase-alt.svg#briefcase-alt"></use>
+                </svg>
+                Services
               </a>
             </li>
             <li className="nav__item">
               <a href="#portfolio" className="nav__link">
-                <i className="uil uil-scenery nav__icon"></i> Portfolio
+                <svg className="nav__icon">
+                  <use xlinkHref="svg/scenery.svg#scenery"></use>
+                </svg>
+                Portfolio
               </a>
             </li>
             <li className="nav__item">
               <a href="#contact" className="nav__link">
-                <i className="uil uil-message nav__icon"></i> ContactMe
+                <svg className="nav__icon">
+                  <use xlinkHref="svg/message.svg#message"></use>
+                </svg>
+                ContactMe
               </a>
             </li>
           </ul>
-          <i className="uil uil-times nav__close nav__icon" id="nav-close"></i>
+
+          <svg className="nav__close nav__icon" id="nav-close">
+            <use xlinkHref="svg/times.svg#times"></use>
+          </svg>
         </div>
 
         <div className="nav__btns">
           {/* <!-- Theme change button --> */}
-          <i className="uil uil-sun change-theme" id="theme-button"></i>
+          {/* <i className="uil uil-sun change-theme" id="theme-button"></i> */}
+
+          <svg className="change-theme" id="theme-button">
+            <use xlinkHref="svg/sun.svg#sun"></use>
+          </svg>
 
           <div className="nav__toggle" id="nav-toggle">
-            <i className="uil uil-apps"></i>
+            {/* <i className="uil uil-apps"></i> */}
+
+            <svg>
+              <use xlinkHref="svg/apps.svg#apps"></use>
+            </svg>
           </div>
         </div>
       </nav>

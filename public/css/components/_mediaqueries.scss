@@ -26,6 +26,10 @@
     width: 180px;
   }
 
+  .home__data {
+    margin-left: 0.5rem;
+  }
+
   .skills__title {
     font-size: var(--normal-font-size);
   }
@@ -91,11 +95,13 @@
     height: 6rem;
   }
 
-  .check-icon {
+  .check-icon,
+  .error-icon {
     transform: scale(0.5) translate3d(0, 0, 0) perspective(1px);
   }
 
-  .success-checkmark {
+  .success-checkmark,
+  .error-mark {
     // height: 44px;
     margin-bottom: 0.5rem;
     width: 44px;
@@ -132,18 +138,35 @@
   .wifi-circle.second {
     display: none;
   }
+
+  .message__close {
+    top: 0.4rem;
+    right: 0.4rem;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .services__modal-head {
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 351px) {
+  .home__data {
+    margin-left: 1rem;
+  }
+
   .popup__card {
     width: 20rem;
   }
 
-  .check-icon {
+  .check-icon,
+  .error-icon {
     transform: scale(0.6);
   }
 
-  .success-checkmark {
+  .success-checkmark,
+  .error-mark {
     // height: 44px;
     margin-bottom: 0.5rem;
     width: 44px;
@@ -152,7 +175,7 @@
   }
 
   .spinner-box {
-    margin-right: 0;
+    margin-right: 0.2rem;
   }
 
   .message__content-success {
@@ -164,7 +187,7 @@
   .message__mail {
     width: 1.9rem;
     height: 1.9rem;
-    right: 1.66rem;
+    right: 1.86rem;
     top: 3.1rem;
   }
 
@@ -208,6 +231,10 @@
 
     top: -4rem;
     left: 0rem;
+  }
+
+  .services__modal-head-icon {
+    transform: translateY(-2px);
   }
 }
 
@@ -262,6 +289,7 @@
   }
   .home__data {
     grid-column: initial;
+    margin-left: 0;
   }
   .home__img {
     order: 1;
@@ -303,15 +331,21 @@
     width: 130%;
   }
 
+  .project__img {
+    margin-top: 0;
+  }
+
   .popup__card {
     width: 26rem;
   }
 
-  .check-icon {
+  .check-icon,
+  .error-icon {
     transform: scale(0.8);
   }
 
-  .success-checkmark {
+  .success-checkmark,
+  .error-mark {
     margin-right: 1.3rem;
     margin-left: 2rem;
   }
@@ -329,8 +363,9 @@
   .message__mail {
     width: 2.9rem;
     height: 2.9rem;
+    right: 1.63rem;
     top: 2.6rem;
-    margin-right: 0.5rem;
+    margin-right: 0.59rem;
   }
 
   .message__title {
@@ -460,7 +495,8 @@
     justify-content: center;
   }
   .services__icon {
-    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
   }
   .services__content {
     padding: 1rem 0 7rem 2.5rem;
@@ -531,7 +567,8 @@
     width: 29rem;
   }
 
-  .check-icon {
+  .check-icon,
+  .error-icon {
     transform: scale(1) translate3d(0, 0, 0) perspective(1px);
   }
 
@@ -540,8 +577,13 @@
     margin-right: 2rem;
   }
 
+  .error-mark {
+    margin-left: 4rem;
+    margin-right: 2rem;
+  }
+
   .spinner-box {
-    margin-right: 0.5rem;
+    margin-right: 0.6rem;
     // margin-right: 0rem;
   }
 
@@ -552,7 +594,7 @@
   .message__mail {
     width: 3.5rem;
     height: 3.5rem;
-    right: 2.4rem;
+    right: 2.57rem;
     top: 2.3rem;
     margin-right: 0;
   }
@@ -565,6 +607,12 @@
   .wifi-symbol {
     right: -2.2rem;
     top: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 970px) {
+  .services__modal-head-icon {
+    transform: translateY(0);
   }
 }
 
@@ -600,7 +648,8 @@
     column-gap: 5rem;
   }
   .swiper-portfolio-icon {
-    font-size: 3.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
   .swiper-button-prev {
     left: -3.5rem;

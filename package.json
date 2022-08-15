@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "author": "yosh",
-  "homepage": "https://imyosh.github.io",
+  "homepage": "https://imyosh.ml",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -18,10 +18,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp CNAME build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "update": "react-scripts build && cp CNAME build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

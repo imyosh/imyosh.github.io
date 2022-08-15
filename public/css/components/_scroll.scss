@@ -10,13 +10,19 @@
   z-index: var(--z-tooltip);
   transition: 0.4s;
 
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+
   &:hover {
     background-color: var(--first-color-alt);
   }
 
   &__icon {
-    font-size: 1.5rem;
-    color: #fff;
+    fill: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 

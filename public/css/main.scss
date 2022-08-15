@@ -19,6 +19,7 @@
 @import "components/checkMark";
 @import "components/wifiIcon";
 @import "components/loader";
+@import "components/error";
 
 /*========== Button Dark/Light ==========*/
 .nav__btns {
@@ -27,15 +28,14 @@
 }
 
 .change-theme {
-  font-size: 1.25rem;
-  color: var(--title-color);
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: var(--title-color);
   margin-right: var(--mb-1);
   cursor: pointer;
 }
 
-.chanknowledge and over one year of experience,
-working in desktop and web technologies,
-deliveringge-theme:hover {
+.change-theme:hover {
   color: var(--first-color);
 }
 /*==================== BASE ====================*/
@@ -47,6 +47,8 @@ deliveringge-theme:hover {
 
 html {
   scroll-behavior: smooth;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {

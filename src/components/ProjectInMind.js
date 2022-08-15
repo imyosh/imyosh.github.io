@@ -13,7 +13,10 @@ function ProjectInMind() {
             </p>
             <a href="#contact" className="button button--flex button--white">
               Contant Me
-              <i className="uil uil-message project__icon button__icon"></i>
+              {/* <i className="uil uil-message project__icon button__icon"></i> */}
+              <svg className="project__icon button__icon button__icon-project">
+                <use xlinkHref="svg/message.svg#message"></use>
+              </svg>
             </a>
           </div>
 
