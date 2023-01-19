@@ -339,7 +339,7 @@ body.dark-theme {
 }
 
 .home__blob-img {
-  width: 165px;
+  height: 15rem;
 }
 
 .home__data {
@@ -1084,6 +1084,20 @@ body.dark-theme {
   border: none;
   outline: none;
   padding: 0.25rem 0.5rem 0.5rem 0;
+}
+
+.contact__img {
+  height: 15rem;
+}
+
+.contact__img__container {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 input:-webkit-autofill,
@@ -2200,9 +2214,7 @@ input:-webkit-autofill:active {
   cursor: pointer;
 }
 
-.chanknowledge and over one year of experience,
-working in desktop and web technologies,
-deliveringge-theme:hover {
+.change-theme:hover {
   color: var(--first-color);
 }
 
@@ -2642,6 +2654,11 @@ img {
   }
   .wifi-circle.second {
     display: block;
+  }
+  .contact__img__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
