@@ -48,6 +48,16 @@
     outline: none;
     padding: 0.25rem 0.5rem 0.5rem 0;
   }
+
+  &__img {
+    &__container {
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    height: 15rem;
+  }
 }
 
 input:-webkit-autofill,

@@ -2,6 +2,55 @@ import React, { useEffect, useRef } from 'react'
 
 const PortfolioData = [
   {
+    title: 'Text Search',
+    type: 'Desktop App - Frontend',
+    description:
+      'Upload text files and have the ability to search texts in them remotely.',
+    thumbnail: '/img/text-search1.jpg',
+    imgs: [
+      '/img/text-search1.jpg',
+      '/img/text-search2.jpg',
+      '/img/text-search3.jpg',
+    ],
+  },
+
+  {
+    title: 'String Generator',
+    type: 'Desktop App',
+    description:
+      'Generate text to copy from forms that can be customly created from schemas.',
+    thumbnail: '/img/string-gen1.jpg',
+    imgs: [
+      '/img/string-gen1.jpg',
+      '/img/string-gen2.jpg',
+      '/img/string-gen3.jpg',
+      '/img/string-gen4.jpg',
+    ],
+  },
+
+  {
+    title: 'Talin AIO',
+    type: 'Desktop App - Frontend',
+    description: 'Auto buying bot.',
+    thumbnail: '/img/talin1.jpg',
+    imgs: [
+      '/img/talin1.jpg',
+      '/img/talin2.jpg',
+      '/img/talin3.jpg',
+      '/img/talin4.jpg',
+      '/img/talin5.jpg',
+    ],
+  },
+
+  {
+    title: 'CYB Tool Repository',
+    type: 'Desktop App',
+    description: 'A hacking tools repository archive.',
+    thumbnail: '/img/cyb1.jpg',
+    imgs: ['/img/cyb1.jpg', '/img/cyb2.jpg', '/img/cyb3.jpg'],
+  },
+
+  {
     title: 'Ophelos',
     type: 'Desktop App',
     description:

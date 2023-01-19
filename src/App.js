@@ -11,6 +11,8 @@ import ProjectInMind from "./components/ProjectInMind"
 import Contactme from "./components/Contactme"
 import Footer from "./components/Footer"
 
+import './'
+
 const App = () => {
   useEffect(() => {
     /*==================== SHOW SCROLL UP ====================*/

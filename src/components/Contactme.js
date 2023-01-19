@@ -1,38 +1,35 @@
-import React, { useState } from "react"
-import MessageNotifyer from "./MessageNotifyer"
+import React, { useState } from 'react'
+import MessageNotifyer from './MessageNotifyer'
 
 var id1, id2
 function Contactme() {
-  const [message, setMessage] = useState("sending")
+  const [message, setMessage] = useState('sending')
 
-  // window.toe = () => setMessage("error")
-  // window.tos = () => setMessage("success")
-  // window.tol = () => setMessage("sending")
   const showMessage = (type) => {
-    if (type === "sending") {
-      document.getElementById("MessageNotifyer").classList.add("open")
+    if (type === 'sending') {
+      document.getElementById('MessageNotifyer').classList.add('open')
     } else {
-      document.getElementById("MessageNotifyer").classList.add("open")
-      if (document.getElementById("check-icon"))
-        document.getElementById("check-icon").style.display = "block" // show
+      document.getElementById('MessageNotifyer').classList.add('open')
+      if (document.getElementById('check-icon'))
+        document.getElementById('check-icon').style.display = 'block' // show
 
       id1 = setTimeout(() => {
-        document.getElementById("MessageNotifyer").classList.remove("open")
+        document.getElementById('MessageNotifyer').classList.remove('open')
       }, 7000)
 
       id2 = setTimeout(() => {
-        if (document.getElementById("check-icon"))
-          document.getElementById("check-icon").style.display = "none" // hide
+        if (document.getElementById('check-icon'))
+          document.getElementById('check-icon').style.display = 'none' // hide
       }, 7300)
     }
   }
 
   const closePopup = () => {
-    document.getElementById("MessageNotifyer").classList.remove("open")
+    document.getElementById('MessageNotifyer').classList.remove('open')
 
     setTimeout(() => {
-      if (document.getElementById("check-icon"))
-        document.getElementById("check-icon").style.display = "none" // hide
+      if (document.getElementById('check-icon'))
+        document.getElementById('check-icon').style.display = 'none' // hide
     }, 300)
 
     clearTimeout(id1)
@@ -43,15 +40,15 @@ function Contactme() {
     e.preventDefault()
     const formData = new FormData(e.target)
     const { name, email, message, project } = Object.fromEntries(formData)
-    setMessage("sending")
-    showMessage("sending")
+    setMessage('sending')
+    showMessage('sending')
     if (navigator.onLine) {
       window.Email.send({
-        Host: "smtp.gmail.com",
-        Username: "yoshportfolio@gmail.com",
-        Password: "port5511",
-        To: "hhoon5511@gmail.com",
-        From: "yoshportfolio@gmail.com",
+        Host: 'smtp.gmail.com',
+        Username: 'yoshportfolio@gmail.com',
+        Password: 'port5511',
+        To: 'hhoon5511@gmail.com',
+        From: 'yoshportfolio@gmail.com',
         Subject: name,
         Body: `<div style="background: #c4d7ebe8; border-radius: 10px; padding: 20px">
 
@@ -59,19 +56,19 @@ function Contactme() {
         </div>
         `,
       }).then((message) => {
-        if (message === "OK") {
-          setMessage("success")
+        if (message === 'OK') {
+          setMessage('success')
           e.target.reset()
-          showMessage("success")
+          showMessage('success')
         } else {
-          showMessage("error")
+          showMessage('error')
         }
 
         console.log(message)
       })
     } else {
-      setMessage("noConnection")
-      showMessage("noConnection")
+      setMessage('noConnection')
+      showMessage('noConnection')
     }
   }
 
@@ -103,8 +100,11 @@ function Contactme() {
 
             <div>
               <h3 className="contact__title">Email</h3>
-              <a href="mailto:hhoon5511@gmail.com" className="contact__subtitle">
-                hhoon5511@gmail.com
+              <a
+                href="mailto:hhoon5511@gmail.com"
+                className="contact__subtitle"
+              >
+                imyosh4@gmail.com
               </a>
             </div>
           </div>
@@ -121,19 +121,33 @@ function Contactme() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} action="" className="contact__form grid">
+        <div className="contact__img__container">
+          <img src="./img/contactme.jpg" alt="" className="contact__img"></img>
+        </div>
+
+        {/* <form onSubmit={handleSubmit} action="" className="contact__form grid">
           <div className="contact__inputs grid">
             <div className="contact__content">
               <label htmlFor="" className="contact__lable">
                 Name
               </label>
-              <input required type="text" className="contact__input" name="name"></input>
+              <input
+                required
+                type="text"
+                className="contact__input"
+                name="name"
+              ></input>
             </div>
             <div className="contact__content">
               <label htmlFor="" className="contact__lable">
                 Email
               </label>
-              <input required type="email" className="contact__input" name="email"></input>
+              <input
+                required
+                type="email"
+                className="contact__input"
+                name="email"
+              ></input>
             </div>
           </div>
 
@@ -141,7 +155,12 @@ function Contactme() {
             <label htmlFor="" className="contact__lable">
               Project
             </label>
-            <input required type="text" className="contact__input" name="project"></input>
+            <input
+              required
+              type="text"
+              className="contact__input"
+              name="project"
+            ></input>
           </div>
           <div className="contact__content">
             <label htmlFor="" className="contact__lable">
@@ -163,7 +182,7 @@ function Contactme() {
               <i className="uil uil-message button__icon"></i>
             </button>
           </div>
-        </form>
+        </form> */}
       </div>
 
       <MessageNotifyer type={message} closePopup={closePopup} />

@@ -1,5 +1,5 @@
-import React from "react"
-import BackgroundAnimation from "./BackgroundAnimation"
+import React from 'react'
+import BackgroundAnimation from './BackgroundAnimation'
 
 const Home = () => {
   return (
@@ -18,7 +18,11 @@ const Home = () => {
               </svg>
             </a>
 
-            <a href="https://github.com/imyosh" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/imyosh"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg className="home__social-icon">
                 <use xlinkHref="svg/github-alt.svg#github-alt"></use>
               </svg>
@@ -59,7 +63,11 @@ const Home = () => {
                                     129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                                     -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
                 />
-                <image className="home__blob-img" x="22" y="7" xlinkHref="/img/profile.png" />
+                <image
+                  className="home__blob-img"
+                  x="-1rem"
+                  xlinkHref="/img/profile.jpg"
+                />
               </g>
             </svg>
             <div></div>
@@ -71,7 +79,8 @@ const Home = () => {
             <h1 className="home__title">Hi, I'am Yosh</h1>
             <h3 className="home__subtitle">Full stack developer</h3>
             <p className="home__description">
-              Decent level of experience in desktop and web development, producing quality work.
+              Decent level of experience in desktop and web development,
+              producing quality work.
             </p>
             <a href="#contact" className="button button--flex">
               Contact Me
