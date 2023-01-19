@@ -532,15 +532,15 @@ body.dark-theme {
 }
 
 .skills__js {
-  width: 80%;
+  width: 85%;
 }
 
 .skills__react {
-  width: 75%;
+  width: 85%;
 }
 
 .skills__python {
-  width: 85%;
+  width: 75%;
 }
 
 .skills__discord {
@@ -548,7 +548,7 @@ body.dark-theme {
 }
 
 .skills__node {
-  width: 80%;
+  width: 85%;
 }
 
 .skills__sqlite3 {
@@ -556,7 +556,7 @@ body.dark-theme {
 }
 
 .skills__electron {
-  width: 75%;
+  width: 90%;
 }
 
 .skills__close .skills__list {

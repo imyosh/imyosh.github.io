@@ -1,24 +1,24 @@
-import React, { useEffect } from "react"
+import React, { useEffect } from 'react'
 
 function Skills() {
   useEffect(() => {
     /*==================== ACCORDION SKILLS ====================*/
-    const skillsContent = document.getElementsByClassName("skills__content"),
-      skillsHeader = document.querySelectorAll(".skills__header")
+    const skillsContent = document.getElementsByClassName('skills__content'),
+      skillsHeader = document.querySelectorAll('.skills__header')
 
     function toggleSkills() {
       let itemClass = this.parentNode.className
 
       for (let i = 0; i < skillsContent.length; i++) {
-        skillsContent[i].className = "skills__content skills__close"
+        skillsContent[i].className = 'skills__content skills__close'
       }
-      if (itemClass === "skills__content skills__close") {
-        this.parentNode.className = "skills__content skills__open"
+      if (itemClass === 'skills__content skills__close') {
+        this.parentNode.className = 'skills__content skills__open'
       }
     }
 
     skillsHeader.forEach((el) => {
-      el.addEventListener("click", toggleSkills)
+      el.addEventListener('click', toggleSkills)
     })
   }, [])
   return (
@@ -49,7 +49,7 @@ function Skills() {
               <div className="skills__data">
                 <div className="skills__titles">
                   <h3 className="skills__name">JavaScript</h3>
-                  <span className="skills__number">80%</span>
+                  <span className="skills__number">85%</span>
                 </div>
                 <div className="skills__bar">
                   <span className="skills__percentage skills__js"></span>
@@ -59,7 +59,7 @@ function Skills() {
               <div className="skills__data">
                 <div className="skills__titles">
                   <h3 className="skills__name">React</h3>
-                  <span className="skills__number">75%</span>
+                  <span className="skills__number">85%</span>
                 </div>
                 <div className="skills__bar">
                   <span className="skills__percentage skills__react"></span>
@@ -109,7 +109,7 @@ function Skills() {
               <div className="skills__data">
                 <div className="skills__titles">
                   <h3 className="skills__name">Python</h3>
-                  <span className="skills__number">85%</span>
+                  <span className="skills__number">75%</span>
                 </div>
                 <div className="skills__bar">
                   <span className="skills__percentage skills__python"></span>
@@ -119,7 +119,7 @@ function Skills() {
               <div className="skills__data">
                 <div className="skills__titles">
                   <h3 className="skills__name">Node Js</h3>
-                  <span className="skills__number">80%</span>
+                  <span className="skills__number">85%</span>
                 </div>
                 <div className="skills__bar">
                   <span className="skills__percentage skills__node"></span>
@@ -161,7 +161,7 @@ function Skills() {
               <div className="skills__data">
                 <div className="skills__titles">
                   <h3 className="skills__name">Electron</h3>
-                  <span className="skills__number">75%</span>
+                  <span className="skills__number">90%</span>
                 </div>
                 <div className="skills__bar">
                   <span className="skills__percentage skills__electron"></span>

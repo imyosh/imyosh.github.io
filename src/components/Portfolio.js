@@ -2,6 +2,21 @@ import React, { useEffect, useRef } from 'react'
 
 const PortfolioData = [
   {
+    title: 'BounceBox',
+    type: 'Desktop App - Frontend',
+    description:
+      'Backup and versioning collaboration in music projects shared between users.',
+    thumbnail: '/img/bouncebox1.jpg',
+    imgs: [
+      '/img/bouncebox1.jpg',
+      '/img/bouncebox2.jpg',
+      '/img/bouncebox3.jpg',
+      '/img/bouncebox4.jpg',
+      '/img/bouncebox5.jpg',
+    ],
+  },
+
+  {
     title: 'Text Search',
     type: 'Desktop App - Frontend',
     description:
